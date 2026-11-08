@@ -1,0 +1,12 @@
+.DS_Store
+Thumbs.db
+*.log
+node_modules/
+.tmp/
+tmp/
+.env
+.env.*
+!.env.example
+
+# Original interview documents stay local.
+podklady/
