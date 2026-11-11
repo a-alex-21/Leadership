@@ -13,7 +13,7 @@ assets/
   pdf-export.js        Přímé vytvoření a stažení PDF 16 : 9
   pdf-images.js        Generovaná data obrázků pro offline export
   vendor/              Lokálně uložené knihovny pro PDF
-  images/              Tři tematické ilustrace
+  images/              Ilustrace (dvě použité v prezentaci)
 podklady/              Lokální podklady (nejsou součástí veřejného repozitáře)
 scripts/check.mjs      Kontrola integrity bez externích závislostí
 README.md              Tento návod
@@ -31,10 +31,10 @@ přikládat. Obrázky nejsou vložené jako Base64 do HTML, takže kód zůstáv
 - Při přidání slidu zachovejte souvislé číslování `slide-1`, `slide-2` atd.
   Aktualizujte také jeho přístupný název a viditelné číslo v `.slide-number`.
 - Barvy jsou definované na začátku `assets/styles.css` v bloku `:root`.
-- Teorie je na slidech 3–5, aplikace na rozhovory na slidu 14.
-- Modelové doplnění na slidu 13 je výslovně smyšlené; není součástí rozhovorových zjištění.
-- Časový plán je 12 minut 55 sekund, zbývají 2 minuty 5 sekund na diskusi a rezervu.
-- Zdroje jsou v patičkách a bibliografii na slidech 17–18. Pouze otevření online
+- Teorie je na slidech 2–4, aplikace na rozhovory na slidu 13.
+- Modelové doplnění na slidech 11–12 je výslovně smyšlené; není součástí rozhovorových zjištění.
+- Časový plán je 12 minut 15 sekund, zbývají 2 minuty 45 sekund na diskusi a rezervu.
+- Zdroje jsou v patičkách a bibliografii na slidu 16. Pouze otevření online
   zdrojů vyžaduje internet; prezentace nemá externí načítané závislosti.
 
 ## Ovládání
@@ -55,7 +55,7 @@ kliknutím, sousední tlačítko ji vynuluje. Odkaz s `#5` otevře pátý slide.
 ## Uložení PDF
 
 Klikněte na **Stáhnout PDF**. Prezentace přímo vytvoří soubor
-`Konflikt-na-pracovisti.pdf` s 18 stránkami o rozměrech **320 × 180 mm (16 : 9)**.
+`Konflikt-na-pracovisti.pdf` se 16 stránkami o rozměrech **320 × 180 mm (16 : 9)**.
 Každý slide je jedna celá stránka, bez okrajů a tiskového dialogu. Ovládání
 ani poznámky řečníka se do PDF nezahrnou. Průběh je viditelný a lze jej zrušit.
 
@@ -86,7 +86,7 @@ Kontrola ověřuje lokální soubory, ID a strukturu slidů, poznámky, vazby ov
 alternativní texty obrázků, přítomnost tiskového rozvržení, časový plán, citace a syntaxi JavaScriptu.
 Nenahrazuje vizuální kontrolu v prohlížeči a PDF. Při refaktoringu byly navíc
 ověřeny chování navigace, dialogů, časomíry, zkratek a gest v simulovaném DOM.
-Přímé stažení bylo ověřeno v Safari. Kontrola PDF potvrdila 18 stran formátu
+Přímé stažení bylo ověřeno v Safari. Kontrola předchozí verze PDF potvrdila 18 stran formátu
 320 × 180 mm; vizuálně byl zkontrolován přehled všech stránek.
 
 ## Podklady
@@ -116,3 +116,12 @@ nejprve spusťte `node scripts/build-pdf-assets.mjs`.
 
 Původní rozhovorové dokumenty ve složce `podklady` se neodesílají do Gitu ani
 na GitHub Pages. V prezentaci na ně odkazuje seznam podkladů na posledním slidu.
+
+## Lokální revize 11. 11. 2026
+
+Odstraněn druhý slide, zkráceny texty a zjednodušen vzhled. Dopady na týmy
+jsou dva jasně označené modelové scénáře. Tato revize nebyla publikována.
+
+Aktuální lokální úprava: 16 slidů, citace pouze teorie, doporučení v šesti blocích, závěr tvoří jediná diskusní otázka.
+
+Fullscreen skryje obě ovládací lišty i ukazatel průběhu a zvětší slide na dostupnou plochu. Na běžné obrazovce zachová poměr 16 : 9. Ovládání: šipky, mezerník, gesta; návrat klávesou Esc nebo F.

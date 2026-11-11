@@ -90,6 +90,8 @@
         await document.exitFullscreen();
       } else if (document.body.requestFullscreen) {
         await document.body.requestFullscreen();
+        // Release the hidden toolbar button so Space advances the slide.
+        ui.fullscreen.blur();
       } else {
         alert('Použijte režim celé obrazovky v nabídce prohlížeče.');
       }

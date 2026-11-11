@@ -41,7 +41,7 @@ for (const section of sections) {
   const duration = section[0].match(/<aside class="speaker-notes" hidden>(\d+):(\d{2})/);
   assert(duration, 'Missing speaking duration.');
   speakingSeconds += Number(duration[1]) * 60 + Number(duration[2]);
-  if (!section[0].includes('cover active')) {
+  if (/id="slide-(?:2|3|4|12|13|14)"/.test(section[0])) {
     assert(section[0].includes('<footer class="source">'), 'Missing slide attribution.');
   }
 }

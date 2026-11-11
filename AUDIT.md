@@ -1,9 +1,9 @@
-# Audit prezentace po doplnění teorie
+# Audit prezentace
 
 ## Obsah a splnění zadání
 
-Prezentace má 18 slidů. Součet plánovaných výstupů v poznámkách je 12:55;
-pro diskusi a rezervu zbývá 2:05 do patnáctiminutového limitu. Jde o plán,
+Prezentace má 17 slidů. Součet plánovaných výstupů v poznámkách je 12:25;
+pro diskusi a rezervu zbývá 2:35 do patnáctiminutového limitu. Jde o plán,
 nikoli o měření skutečně přednesené prezentace.
 
 | Požadavek | Stav a vyhodnocení |
@@ -11,10 +11,10 @@ nikoli o měření skutečně přednesené prezentace.
 | Teoretické zakotvení | Doplněny úrovně konfliktu, latentní/manifestovaný projev, pět stylů a 5 P z dodaného PPTX. |
 | Dva lídři | Dva individuální rozhovory o konfliktech s jednotlivými lídry, každý v délce 20 minut; délka upřesněna zadavatelem. |
 | Vznik, průběh a řešení | Popsány u obou; u VOUT jde o širší týmovou situaci s individuálními zásahy. |
-| Reflexe a vztahy | Odděleny doložené výsledky, naše interpretace a neznámé následky. |
+| Reflexe a vztahy | Výsledky rozhovorů doplňují dva výslovně modelové scénáře dopadů na týmy. |
 | Porovnání a syntéza | Přímá komparace, aplikace teorie na konkrétní jednání a společná doporučení. |
 | Zdroje | Odkazy u tvrzení, úplná odborná bibliografie a seznam dodaných materiálů. |
-| Chybějící rozhovorová data | Doplněn modelový slide. Je výslovně fikční a nenahrazuje empirická data. |
+| Chybějící rozhovorová data | Doplněny dva modelové scénáře. Je výslovně fikční a nenahrazuje empirická data. |
 
 **Celkové hodnocení:** prezentace propojuje dva individuální dvacetiminutové
 rozhovory s teorií a společnými doporučeními. Písemné soubory jsou podklady
@@ -46,7 +46,7 @@ metaanalýza De Dreu a Weingart (2003; DOI 10.1037/0021-9010.88.4.741) a studie
 Edmondson (1999; DOI 10.2307/2666999). V prezentaci jsou bibliografické údaje
 včetně DOI a explicitní odkazy na použité místní podklady. Ověřeno 8. 11. 2026.
 
-## Technické ověření
+## Historické technické ověření předchozí verze (18 slidů)
 
 - `node scripts/check.mjs`: prošlo; 18 slidů, souvislá ID, poznámky,
   existující lokální soubory, citace, časový limit, syntaxe JS a tiskové styly.
@@ -57,7 +57,7 @@ včetně DOI a explicitní odkazy na použité místní podklady. Ověřeno 8. 1
 - Prošly testy vodorovného, svislého a zrušeného dotykového gesta.
 - Online odkazy jsou jen citace otevírané uživatelem; JS, CSS a obrázky jsou lokální.
 
-## Přímé stažení PDF
+## Přímé stažení PDF — ověření předchozí verze
 
 Tlačítko nyní generuje PDF přímo pomocí lokálně uložených knihoven
 html2canvas a jsPDF. Nevyvolává `window.print()` ani tiskový dialog.
@@ -73,3 +73,20 @@ Slidy jsou rastrové, 3200 × 1800 px; text se nedá samostatně označit.
 Online bibliografické odkazy jsou doplněny jako PDF anotace.
 Pro otevření přes `file://` jsou obrázky připraveny v lokálním generovaném
 JS souboru, aby se zabránilo zablokování canvasu kvůli přístupu k místním obrázkům.
+
+## Lokální revize 11. 11. 2026
+
+- Odstraněn metodický druhý slide; 17 slidů, plán 12:25.
+- Zkráceny titulky a sdělení, odstraněny výzvy k doplnění rozhovorů.
+- Dva modelové scénáře konkrétně rozvíjejí provoz, spolupráci a důvěru v týmu.
+- Střídmější sazba, jemné linky, tlumená modrá, menší ilustrace případů.
+- Opraveny neplatné CSS pseudoselektory (focus, fullscreen, backdrop).
+- Statická kontrola prošla pro 17 slidů; lokální slide s dopady vizuálně ověřen v Safari.
+- PDF exporter zachován, nový export nebyl v této revizi znovu vizuálně ověřen.
+- Žádný commit, push ani publikace této revize.
+
+## Následná lokální úprava
+
+16 slidů, plán 12:15. Odstraněn seznam rozhovorových podkladů a všechny jejich citace. Teoretické zdroje zachovány v patičkách a na slidu 16. Modelové dopady zůstávají označené. Doporučení mají šest oddělených polí, závěr obsahuje pouze otázku. Barvy: tmavě modrá a tlumená zelenomodrá na světlých plochách; tmavý text pro projektor.
+
+Barevná korekce: návrat k původní modré #315cff, odstranění zelenomodré a pastelových karet. Syntéza používá šest otevřených typografických bloků s linkami a modrým číslováním. Pouze lokálně.
